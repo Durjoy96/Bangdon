@@ -18,7 +18,12 @@
           theme: {
             extend: {
               colors: {
-                
+                base_100 : "#ffffff",
+                base_200 : "#F9F7F3",
+                base_content : "#111111",
+                base_content_secondary : "#111111b3",
+                primary : "#B4F461",
+                primary_content : "#111111",
               },
               fontFamily: {
                 lexend : ["Lexend", "sans-serif"],
@@ -29,7 +34,19 @@
       </script>
 </head>
 <body class="font-lexend">
-
+  <header class="bg-base_200 pt-3 pb-3 md:pt-4 md:pb-12">
+    <nav class="max-w-screen-lg mx-auto px-5 flex justify-between items-center flex-wrap gap-y-2">
+      <a href=""><button class="bg-primary text-primary_content px-3 py-2 font-semibold text-sm rounded-lg md:px-6 md:py-3 md:text-xl">Blog</button></a>
+      <div class="flex gap-1 items-center md:gap-2">
+        <img class="max-w-5 md:inline-block md:max-w-8" src="assets/images/logo.png" alt="logo">
+        <span class="text-lg font-semibold text-base_content md:text-xl">BangDon</span>
+      </div>
+      <div class="flex items-center gap-1 md:gap-2">
+        <img class="max-w-5 md:max-w-12" src="assets/images/coin.png" alt="coin">
+        <p class="text-base_content_secondary text-lg font-medium md:text-xl"><span>5500</span> BDT</p>
+      </div>
+    </nav>
+  </header>
 </body>
 
 </html>
