@@ -4,7 +4,6 @@ for (let btn of donateBtns) {
   btn.addEventListener("click", function (event) {
     const parentEle = event.target.parentElement.parentElement;
     getValidation(parentEle);
-    addHistory(parentEle);
   });
 };
 
@@ -25,11 +24,12 @@ function getValidation(parentEle) {
   const balance = getElementById("balance");
 
   if (Number(input.value) > Number(balance.innerText) || isNaN(Number(input.value)) === true || input.value === "" || input.value.includes("-") === true) {
-    alert("please input a valid amount");
+    alert("Invalid Donation Amount");
   } else {
     addDonateAmount(parentEle); //add donate amount
     decreaseBalance(parentEle); //decrease balance
     getElementById("modal").showModal(); //show the modal
+    addHistory(parentEle); //add history
   };
 };
 
@@ -39,6 +39,8 @@ function addHistory(parentEle) {
   const input = parentEle.querySelector(".input");
   const cardTitle = parentEle.querySelector(".card-title");
   const date = new Date();
+  const msg = getElementById("historyMsg");
+  msg.classList.add("hidden");
 
   historyContainer.innerHTML += `
    <div class="bg-base_200 border border-base_content/10 rounded-2xl p-5 md:p-6 lg:p-8">

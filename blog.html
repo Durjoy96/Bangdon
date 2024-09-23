@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangdon</title>
+    <!-- lexend font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- DaisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- tailwindcss cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        base_100: "#ffffff",
+                        base_200: "#F9F7F3",
+                        base_content: "#111111",
+                        base_content_secondary: "#111111b3",
+                        primary: "#B4F461",
+                        primary_content: "#111111",
+                    },
+                    fontFamily: {
+                        lexend: ["Lexend", "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="class=" font-lexend min-h-screen"">
+    <header class="sticky top-0 backdrop-blur-md">
+        <div class="bg-base_200/80 pt-4 pb-4 backdrop-blur-3xl md:pt-6 md:pb-6">
+            <nav class="max-w-[1140px] mx-auto px-5 flex justify-between items-center flex-wrap gap-y-2">
+                <a href="index.html"><button
+                        class="bg-primary text-primary_content px-4 py-2 font-semibold text-base rounded-lg md:px-6 md:py-3 md:text-xl">Home</button></a>
+                <div class="flex gap-1 items-center md:gap-2">
+                    <img class="max-w-5 md:inline-block md:max-w-8" src="assets/images/logo.png" alt="logo">
+                    <span class="text-lg font-semibold text-base_content md:text-xl">BangDon</span>
+                </div>
+                <div class="flex items-center gap-1 md:gap-2">
+                    <img class="max-w-5 md:max-w-12" src="assets/images/coin.png" alt="coin">
+                    <p class="text-base_content_secondary text-lg font-medium md:text-xl"><span id="balance">5500</span>
+                        BDT</p>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-[1140px] mx-auto px-5 mt-12 lg:mt-20">
+        <section class="flex flex-col gap-6 lg:flex-row">
+            <div>
+                <h2 class="text-2xl font-bold text-base_content md:text-4xl">Frequently Asked Questions</h2>
+                <p class="text-base text-base_content_secondary mt-2">Let's see what you have learned from our course</p>
+            </div>
+            <div class="space-y-5 w-full md:space-y-6 lg:space-y-8">
+                <div class="collapse collapse-arrow bg-base_200">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-lg font-medium text-base_content md:text-xl">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                      <p class="text-base_content_secondary">The DOM (Document Object Model) gives programmers special powers to dynamically access and manipulate the document. It allows us to create, update, remove, and style elements.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base_200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-lg font-medium text-base_content md:text-xl">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                      <p class="text-base_content_secondary">There are several methods to select an element from the DOM. like getElementById(), getElementsByClassName(), getElementsByTagName(),  querySelector(), querySelectorAll()
+                      </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base_200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-lg font-medium text-base_content md:text-xl">What is event delegation in the context of the DOM, and why is it useful?</div>
+                    <div class="collapse-content">
+                      <p class="text-base_content_secondary">Event delegation is a method where we add an event listener to the parent element instead of the child elements.
+                        <br>
+                        Using event delegation you don't need to add event listeners for all the child elements. Instead, you can add the event listener to the parent element and access all the child elements. It also makes it easier to update and understand the code.
+                      </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow bg-base_200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-lg font-medium text-base_content md:text-xl">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p class="text-base_content_secondary">There are several methods to manipulate an element's attributes like getAttribute(), setAttribute(), removeAttribute(). And for styles we can use style, classList.add, classList.remove and className.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
