@@ -27,9 +27,10 @@ function getValidation(parentEle) {
   if (Number(input.value) > Number(balance.innerText) || isNaN(Number(input.value)) === true || input.value === "" || input.value.includes("-") === true) {
     alert("please input a valid amount");
   } else {
-    addDonateAmount(parentEle);
-    decreaseBalance(parentEle)
+    addDonateAmount(parentEle); //add donate amount
+    decreaseBalance(parentEle); //decrease balance
+    getElementById("modal").showModal(); //show the modal
   };
-  
+
 };
 
